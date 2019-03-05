@@ -37,7 +37,7 @@ write_files:
         # This will clone the git repository and instantiate an environment per
         # branch in /etc/puppetlabs/code/environments
         :github:
-          remote: 'https://github.com/jaxxstorm/puppet-consul-demo.git'
+          remote: 'https://github.com/jaxxstorm/consu-infra-demo.git'
           basedir: '/etc/puppetlabs/code/environments'
   - path: /etc/puppetlabs/puppet/autosign.conf
     content: |
