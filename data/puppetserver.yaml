@@ -1,0 +1,11 @@
+puppet::server: true
+puppet::autosign: true
+puppet::server_foreman: false
+puppet::server_reports: 'store'
+puppet::server_external_nodes: ''
+puppet::autosign_entries:
+  - briggs.lan
+puppet::server_common_modules_path:
+  - /etc/puppetlabs/code/modules
+  - /opt/puppetlabs/puppet/modules
+  - /usr/share/puppet/modules
