@@ -2,13 +2,6 @@
 hostname: "${fqdn}"
 fqdn: "${fqdn}"
 
-yum_repos:
-  puppet:
-    baseurl: https://yum.puppetlabs.com/el/7/PC1/x86_64/
-    enabled: 1
-    gpgcheck: 0
-    name: PuppetLabs
-
 packages:
   - ruby
   - ruby-devel
@@ -17,7 +10,7 @@ packages:
   - bind-utils
  
 runcmd:
-  - yum install -y https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
+  - yum install -y https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm
   - yum install -y puppetserver
   - sed -i 's/2g/512m/g' /etc/sysconfig/puppetserver
   - mkdir -p /etc/facter/facts.d
@@ -38,7 +31,7 @@ write_files:
         # This will clone the git repository and instantiate an environment per
         # branch in /etc/puppetlabs/code/environments
         :github:
-          remote: 'https://github.com/jaxxstorm/puppet-consul-demo.git'
+          remote: 'https://github.com/jaxxstorm/consu-infra-demo.git'
           basedir: '/etc/puppetlabs/code/environments'
   - path: /etc/facter/facts.d/role.txt
     content: |
