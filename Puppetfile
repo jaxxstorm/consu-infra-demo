@@ -109,3 +109,7 @@ mod 'grafana',
 mod 'resolv_conf',
   :git => 'https://github.com/saz/puppet-resolv_conf.git',
   :ref => '1f74239f150f4789d3a6e6231f06d6f5bd4391da'
+
+mod 'unbound',
+  :git    => 'https://github.com/xaque208/puppet-unbound.git',
+  :commit => '28f68fb7a83403a0d2b947e0d48179a45020e9ad'
