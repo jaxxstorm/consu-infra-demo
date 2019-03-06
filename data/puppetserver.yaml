@@ -9,3 +9,5 @@ puppet::server_common_modules_path:
   - /etc/puppetlabs/code/modules
   - /opt/puppetlabs/puppet/modules
   - /usr/share/puppet/modules
+puppet::dns_alt_names:
+  - puppetserver.service.consul

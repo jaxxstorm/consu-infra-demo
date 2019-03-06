@@ -1,3 +1,5 @@
 profiles::consul::bootstrap_expect: 3
 profiles::consul::server: true
 profiles::consul::ui: true
+puppet::dns_alt_names:
+  - consul.service.consul
