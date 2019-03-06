@@ -5,7 +5,7 @@ class profiles::coredns (
   include ::coredns
 
   coredns::plugin { 'consul_forward':
-    content => template('profiles/coredns/consul_forward.erb'),
+    content => epp('profiles/coredns/consul_forward.epp'),
   }
 
 
