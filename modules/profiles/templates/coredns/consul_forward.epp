@@ -1,3 +1,4 @@
 service.consul {
-forward . <% $profiles::coredns::consulservers.each |$consulserver| { -%>  <%= $consulserver %> <% } -%>
+forward . <% $profiles::coredns::consulservers.each |$consulserver| { -%>  <%= $consulserver %> 
+<% } -%>
 }
