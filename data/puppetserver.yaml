@@ -12,3 +12,4 @@ puppet::server_common_modules_path:
 puppet::dns_alt_names:
   - puppetserver.service.consul
 puppet::puppetmaster: 'puppetserver-0.briggs.lan'
+puppet::server_crl_enable: true
