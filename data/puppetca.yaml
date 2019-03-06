@@ -3,6 +3,7 @@ puppet::autosign: true
 puppet::server_foreman: false
 puppet::server_reports: 'store'
 puppet::server_external_nodes: ''
+puppet::server_ca_allow_sans: true
 puppet::autosign_entries:
   - briggs.lan
 puppet::server_common_modules_path:
