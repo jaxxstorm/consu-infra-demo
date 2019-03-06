@@ -8,5 +8,9 @@ class profiles::coredns (
     content => epp('profiles/coredns/consul_forward.epp'),
   }
 
+  coredns::plugin { 'all':
+    content => epp('profiles/coredns/all.epp'),
+  }
+
 
 }

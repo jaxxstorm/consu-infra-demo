@@ -7,14 +7,6 @@ variable "ssh_public_key" {}
 
 variable "number_of_puppetservers" {}
 
-variable "number_of_databases" {
-  default = 2
-}
-
-variable "number_of_vaultservers" {
-  default = 3
-}
-
 provider "digitalocean" {
   token = "${var.digital_ocean_token}"
 }
