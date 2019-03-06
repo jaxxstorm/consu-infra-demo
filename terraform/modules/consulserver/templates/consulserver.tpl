@@ -17,7 +17,7 @@ packages:
   - bind-utils
  
 runcmd:
-  - yum install -y https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm 
+  - yum install -y https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm
   - yum install -y puppet-agent
   - mkdir -p /etc/facter/facts.d
   - echo -e "nameserver 173.245.58.51\nnameserver 8.8.8.8" > /etc/resolv.conf

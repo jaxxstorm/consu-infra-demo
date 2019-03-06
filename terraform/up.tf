@@ -36,7 +36,6 @@ module "puppet_ca" {
   digitalocean_region = "sfo2"
 }
 
-/*
 module "puppetserver" {
   source              = "modules/puppetserver"
   digitalocean_domain = "${var.digital_ocean_domain}"
@@ -54,28 +53,9 @@ module "consulserver" {
   digitalocean_region = "sfo2"
 }
 
-module "vaultserver" {
-  source              = "modules/vaultserver"
-  digitalocean_domain = "${var.digital_ocean_domain}"
-  digitalocean_keys   = "${digitalocean_ssh_key.personal.id}"
-  puppet_ca           = ["${module.puppet_ca.name}"]
-  count               = "${var.number_of_vaultservers}"
-}
-
-module "mysql" {
-  source              = "modules/mysql"
-  digitalocean_domain = "${var.digital_ocean_domain}"
-  digitalocean_keys   = "${digitalocean_ssh_key.personal.id}"
-  puppet_ca           = ["${module.puppet_ca.name}"]
-  count               = "${var.number_of_databases}"
-}
-*/
-
 output "puppetca_address" {
   value = "${module.puppet_ca.addresses}"
 }
-
-/*
 
 output "puppetserver_addresses" {
   value = "${module.puppetserver.addresses}"
@@ -84,12 +64,3 @@ output "puppetserver_addresses" {
 output "consulserver_addresses" {
   value = "${module.consulserver.addresses}"
 }
-
-output "mysql_addresses" {
-  value = "${module.mysql.addresses}"
-}
-
-output "vault_addresses" {
-  value = "${module.vaultserver.addresses}"
-}
-*/

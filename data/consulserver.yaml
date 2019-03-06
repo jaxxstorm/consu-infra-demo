@@ -1,0 +1,3 @@
+profiles::consul::bootstrap_expect: 3
+profiles::consul::server: true
+profiles::consul::ui: true
