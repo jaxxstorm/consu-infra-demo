@@ -12,6 +12,8 @@ class profiles::base(
 
   include ::unbound
 
+  include ::resolv_conf
+
   unbound::stub { $::domain :
     address  => '173.245.58.51',
     insecure => true,
