@@ -1,7 +1,7 @@
 # consul profiles
 class profiles::consul (
   $datacenter = 'sfo2',
-  $advertise_addr = $::networking['interfaces']['eth0']['ip'],
+  $advertise_addr = $::networking['interfaces']['eth1']['ip'],
   $retry_join = [],
   $server = false,
   $bootstrap_expect = 3,
