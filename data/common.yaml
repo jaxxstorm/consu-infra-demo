@@ -1,5 +1,6 @@
 ---
 puppet::agent: true
+puppet::ca_server: 'puppetserver-0.briggs.lan'
 profiles::consul::retry_join:
   - "consulserver-0.briggs.lan"
   - "consulserver-1.briggs.lan"
