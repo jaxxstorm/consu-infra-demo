@@ -14,6 +14,8 @@ class profiles::base(
 
   include ::resolv_conf
 
+  include ::profiles::prometheus::node
+
   unbound::stub { $::domain :
     address  => '173.245.58.51',
     insecure => true,
