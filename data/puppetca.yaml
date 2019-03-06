@@ -10,3 +10,4 @@ puppet::server_common_modules_path:
   - /etc/puppetlabs/code/modules
   - /opt/puppetlabs/puppet/modules
   - /usr/share/puppet/modules
+puppet::puppetmaster: 'puppetserver-0.briggs.lan'
