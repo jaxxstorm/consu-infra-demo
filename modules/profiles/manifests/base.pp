@@ -2,8 +2,8 @@ class profiles::base(
 
 ){
 
-  class { '::profiles::packages:'
-    stage => 'pre'
+  class { '::profiles::packages':
+    stage => pre
   }
 
   include ::puppet
