@@ -5,3 +5,7 @@ profiles::consul::retry_join:
   - "consulserver-1.briggs.lan"
   - "consulserver-2.briggs.lan"
 puppet::puppetmaster: 'puppetserver.service.consul'
+profiles::coredns::consulservers:
+  - '104.248.177.231:8600'
+  - '157.230.160.153:8600'
+  - '178.128.2.92:8600'
