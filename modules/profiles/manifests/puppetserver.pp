@@ -16,4 +16,9 @@ class profiles::puppetserver {
     provider => puppetserver_gem,
   }
 
+  ::consul::service { 'puppetserver':
+    ensure => present,
+    port   => '8140',
+  }
+
 }
