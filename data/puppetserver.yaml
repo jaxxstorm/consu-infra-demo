@@ -1,6 +1,7 @@
 puppet::server: true
 puppet::autosign: true
 puppet::ca: false
+puppet::ca_crl_sync: true
 puppet::server_foreman: false
 puppet::server_reports: 'store'
 puppet::server_external_nodes: ''
