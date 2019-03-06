@@ -12,6 +12,10 @@ class profiles::base(
 
   include ::profiles::coredns
 
+  class { 'resolv_conf':
+    nameservers => ['127.0.0.1', '173.245.58.51', '8.8.8.8'],
+  }
+
 
 
 

@@ -105,3 +105,7 @@ mod 'nfs',
 mod 'grafana',
   :git => 'https://github.com/voxpupuli/puppet-grafana.git',
   :ref => 'b84b3be1b51bb2c604ccb7b881b59758ee6a3041'
+
+mod 'resolv_conf',
+  :git => 'https://github.com/saz/puppet-resolv_conf.git',
+  :ref => '1f74239f150f4789d3a6e6231f06d6f5bd4391da'
