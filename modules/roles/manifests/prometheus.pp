@@ -1,4 +1,4 @@
-class roles:prometheus inherits roles::base {
+class roles::prometheus inherits roles::base {
 
   include ::profiles::prometheus::server
 

@@ -51,6 +51,7 @@ module "prometheus" {
   digitalocean_keys   = "${digitalocean_ssh_key.personal.id}"
   puppet_ca           = ["${module.puppet_ca.name}"]
   digitalocean_region = "sfo2"
+  count               = 1
 }
 
 output "puppetca_address" {
@@ -63,4 +64,8 @@ output "puppetserver_addresses" {
 
 output "consulserver_addresses" {
   value = "${module.consulserver.addresses}"
+}
+
+output "prometheus_addresses" {
+  value = "${module.prometheus.addresses}"
 }
