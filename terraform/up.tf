@@ -45,6 +45,14 @@ module "consulserver" {
   digitalocean_region = "sfo2"
 }
 
+module "prometheus" {
+  source              = "modules/prometheus"
+  digitalocean_domain = "${var.digital_ocean_domain}"
+  digitalocean_keys   = "${digitalocean_ssh_key.personal.id}"
+  puppet_ca           = ["${module.puppet_ca.name}"]
+  digitalocean_region = "sfo2"
+}
+
 output "puppetca_address" {
   value = "${module.puppet_ca.addresses}"
 }
